@@ -26,8 +26,11 @@ jobs:
         with:
           node-version: 12
 
-      - name: build project
+      - name: install project dependency
         run: npm install
+
+      - name: build project
+        run: npm build
 
       - name: Install Surge
         run: npm install -g surge
